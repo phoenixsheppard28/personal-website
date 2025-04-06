@@ -107,40 +107,6 @@ const Home: NextPage = () => {
     }
   ];
 
-  // const coolShit: CoolShitType[] = [
-  //   {
-  //     title: "hosted michigan's first ever ai tinkerers meetup",
-  //     link: "https://ann-arbor.aitinkerers.org/p/ai-tinkerers-ann-arbor-september-18"
-  //   },
-  //   {
-  //     title: "scaled a 300+ person college entrepreneurship club bringing in companies / vcs like Google\
-  //     , Bubble, Uber, Ramp, MongoDB, Neo, Drive Capital, LeapYear, Contrary Capital, etc.",
-  //     link: "https://v1michigan.com/"
-  //   },
-  //   {
-  //     title: "ran an accountability group of 10+ people for an entire summer",
-  //     link: "https://substack.com/home/post/p-147105734"
-  //   },
-  //   {
-  //     title: "threw a 800+ person halloween party",
-  //     link: "https://www.instagram.com/saddy.house/"
-  //   },
-  //   {
-  //     title: "got 120k+ likes and over 2m+ views on tiktok",
-  //     link: "https://www.tiktok.com/@real_kunjadia"
-  //   },
-  //   {
-  //     title: "was ranked top 16 in the state of michigan for folkstyle wrestling",
-  //   },
-  //   {
-  //     title: "started ship it, a regular coworking event designed for builders, at umich",
-  //     link: "https://v1michigan.com/ship-it/"
-  //   },
-  //   {
-  //     title: "solo-travelled for 2 weeks in europe",
-  //   },
-  // ];
-
   return (
     <>
       <Head>
@@ -154,11 +120,7 @@ const Home: NextPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://sheppnix.dev" />
 
-        {/* Twitter Card Meta Tags
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Phoenix Sheppard" />
-        <meta name="twitter:description" content="Engineering + Product + Design" />
-        <meta name="twitter:image" content="/og-image.png" /> */}
+        
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -263,7 +225,7 @@ const Home: NextPage = () => {
 
         <div className={`transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} relative z-10 max-w-3xl w-full`}>
           <div className="space-y-8">
-            <h1 className="text-5xl sm:text-5xl text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Dev_Kunjadia'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
+            <h1 className="text-5xl sm:text-5xl text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Phoenix_Sheppard'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
               Hi, I'm Phoenix
             </h1>
 
