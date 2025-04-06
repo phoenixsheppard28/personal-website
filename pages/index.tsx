@@ -103,7 +103,7 @@ const Home: NextPage = () => {
       description: "soon...",
       // image: "/employment/citywide.png", 
       githubLink: "https://github.com/phoenixsheppard28/network-traffic-classifier",
-      technologies: ["scikit-Learn", "Apache Spark", "pandas", "Snowflake", "python"]
+      technologies: ["scikit-learn", "Apache Spark", "pandas", "Snowflake", "python"]
     }
   ];
 
