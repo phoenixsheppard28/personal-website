@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       school: "University of Michigan, Ann Arbor",
       link: "https://www.engin.umich.edu/",
       degree: "B.S.E. Computer Science",
-      description: "Coursework: Data structures & Algorithms, C++ Programming, CS Pragmatics, \
+      description: "Coursework: Data structures & Algorithms, C++ Programming, CS Pragmatics, Discrete Math \
                   Calculus 1-2",
       image: "/education/umich.jpg"
     }
