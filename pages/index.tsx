@@ -92,6 +92,12 @@ const Home: NextPage = () => {
       technologies: ["scikit-learn", "pandas", "numpy", "python"]
     },
     {
+    title:"UofM Pancake Forecaster",
+    description:"Aggregates and displays the days and dining halls that pancakes are served at the University of Michigan!",
+    githubLink: "https://github.com/phoenixsheppard28/pancake-forecast",
+    technologies: ["FastAPI", "React.js", "Vercel", "Redis", "python"]
+    },
+    {
       title: "Java Autograder",
       description: "soon...",
       // image: "/employment/citywide.png", 
