@@ -58,8 +58,8 @@ const Home: NextPage = () => {
       school: "University of Michigan, Ann Arbor",
       link: "https://www.engin.umich.edu/",
       degree: "B.S.E. Computer Science",
-      description: "Coursework: Data structures & Algorithms, C++ Programming, CS Pragmatics, Discrete Math, \
-                  Calculus 1-2",
+      description: "Coursework: Data structures & Algorithms, Web Systems, Computer Organization, Unix Programming, C++ Programming, \
+                  Linear Algebra, Calculus 1-3",
       image: "/education/umich.jpg"
     }
   ];
@@ -74,6 +74,16 @@ const Home: NextPage = () => {
       ],
       image: "/employment/citywide.png"
     },
+    // {
+    //   company: "University of Michigan ROTC",
+    //   role: "Software Development Volunteer",
+    //   link: "https://army.rotc.umich.edu/",
+    //   description:[
+    //     "Fill this out once done"
+    //   ],
+    //   image:"/employment/rotc.png"
+      
+    // },
   ];
 
   const projects: ProjectType[] = [
@@ -249,7 +259,7 @@ const Home: NextPage = () => {
           <div className="w-2 h-2 rounded-full bg-[#556B2F] animate-pulse"></div>
         </div>
 
-        <div className="fixed md:left-4 md:top-1/2 md:-translate-y-1/2 top-4 left-0 right-0 md:right-auto flex flex-row md:flex-col items-center justify-center md:justify-center gap-4 z-50">
+        <div className="fixed md:left-4 md:top-1/2 md:-translate-y-1/2 top-4 left-0 right-0 md:right-auto flex flex-row md:flex-col items-center justify-center md:justify-center gap-2 z-50">
           <Link href="https://github.com/phoenixsheppard28"
             className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full">
             <svg
@@ -269,6 +279,10 @@ const Home: NextPage = () => {
               xmlns="http://www.w3.org/2000/svg">
               <path d="M19 3C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19ZM18.5 18.5V13.2C18.5 11.5 17.1 10.1 15.4 10.1C14.5 10.1 13.4 10.6 12.8 11.4V10.3H10.3V18.5H12.8V13.6C12.8 12.8 13.4 12.2 14.2 12.2C15 12.2 15.6 12.8 15.6 13.6V18.5H18.5ZM6.9 8.2C7.8 8.2 8.5 7.5 8.5 6.6C8.5 5.7 7.8 5 6.9 5C6 5 5.3 5.7 5.3 6.6C5.3 7.5 6 8.2 6.9 8.2ZM8.2 18.5V10.3H5.7V18.5H8.2Z" />
             </svg>
+          </Link>
+          <Link href="https://www.sheppnix.dev/Phoenix_Sheppard_Resume.pdf"
+            className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3125" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-file-user-icon lucide-file-user"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><circle cx="12" cy="13" r="2"/></svg>
           </Link>
         </div>
 
