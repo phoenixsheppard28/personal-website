@@ -74,16 +74,16 @@ const Home: NextPage = () => {
       ],
       image: "/employment/citywide.png"
     },
-    // {
-    //   company: "University of Michigan ROTC",
-    //   role: "Software Development Volunteer",
-    //   link: "https://army.rotc.umich.edu/",
-    //   description:[
-    //     "Fill this out once done"
-    //   ],
-    //   image:"/employment/rotc.png"
+    {
+      company: "University of Michigan ROTC",
+      role: "Software Development Volunteer",
+      link: "https://army.rotc.umich.edu/",
+      description:[
+        "Tri-Service Wargame Development Team"
+      ],
+      image:"/employment/rotc.png"
       
-    // },
+    },
   ];
 
   const projects: ProjectType[] = [
