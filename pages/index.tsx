@@ -282,7 +282,13 @@ const Home: NextPage = () => {
           </Link>
           <Link href="https://www.sheppnix.dev/Phoenix_Sheppard_Resume.pdf"
             className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" height="30px" width="30px" version="1.1" id="_x32_" viewBox="0 0 512 512" xmlSpace="preserve" fill="currentColor">
+            <svg
+                className="w-[30px] h-[30px] opacity-70 hover:opacity-100 transition-opacity"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
                 <g>
                   <path className="st0" d="M276.239,252.183c-6.37,2.127-13.165,3.308-20.239,3.308c-7.074,0-13.87-1.181-20.24-3.308   c-46.272,7.599-70.489,41.608-70.489,82.877H256h90.728C346.728,293.791,322.515,259.782,276.239,252.183z"/>
                   <path className="st0" d="M256,240.788c27.43,0,49.658-22.24,49.658-49.666v-14.087c0-27.426-22.228-49.659-49.658-49.659   c-27.43,0-49.658,22.233-49.658,49.659v14.087C206.342,218.548,228.57,240.788,256,240.788z"/>
@@ -340,30 +346,6 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        {/* Cool Shit Section
-        <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
-          <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Cool_Shit'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-            some stuff i've done
-          </h2>
-          <div className="flex flex-col space-y-4 font-crimson">
-            {coolShit.map((item, index) => (
-              <span key={index} className="text-[#556B2F] text-lg">
-                {item.link ? (
-                  <Link
-                    href={item.link}
-                    className="inline-flex items-center gap-2 hover:underline hover:text-[#6B8E23] transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {item.title}
-                  </Link>
-                ) : (
-                  item.title
-                )}
-              </span>
-            ))}
-          </div>
-        </section> */}
        {/* Projects Section */}
 <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
   <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Projects'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
