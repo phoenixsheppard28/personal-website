@@ -66,6 +66,15 @@ const Home: NextPage = () => {
 
   const experience: ExperienceType[] = [
     {
+      company: "Pursuit Markets",
+      role: "Software Engineer Intern",
+      link: "https://www.pursuit.us/", 
+      description: [
+        "Summer 2025"
+      ],
+      image: "/employment/pursuit.png"
+    },
+    {
       company: "Citywide Painting",
       role: "House Painter, Invoice Clerk",
       link: "https://www.citywidepaint.com/", 
@@ -74,16 +83,16 @@ const Home: NextPage = () => {
       ],
       image: "/employment/citywide.png"
     },
-    {
-      company: "University of Michigan ROTC",
-      role: "Software Development Volunteer",
-      link: "https://army.rotc.umich.edu/",
-      description:[
-        "Tri-Service Wargame Development Team"
-      ],
-      image:"/employment/rotc.png"
+    // {
+    //   company: "University of Michigan ROTC",
+    //   role: "Software Development Volunteer",
+    //   link: "https://army.rotc.umich.edu/",
+    //   description:[
+    //     "Tri-Service Wargame Development Team"
+    //   ],
+    //   image:"/employment/rotc.png"
       
-    },
+    // },
   ];
 
   const projects: ProjectType[] = [
@@ -115,11 +124,11 @@ const Home: NextPage = () => {
       technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker", "python"]
     },
     {
-      title: "Network Traffic Classifier",
+      title: "Tor Network Implementation",
       description: "soon...",
       // image: "/employment/citywide.png", 
-      githubLink: "https://github.com/phoenixsheppard28/network-traffic-classifier",
-      technologies: ["scikit-learn", "Apache Spark", "pandas", "Snowflake", "python"]
+      githubLink: "https://github.com/phoenixsheppard28/tor",
+      technologies: ["C++","TCP/IP","Socks5","OpenSSL"]
     }
   ];
 
