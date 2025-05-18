@@ -32,10 +32,7 @@ interface EducationType {
   image?: string;
 }
 
-interface CoolShitType {
-  title: string;
-  link?: string;
-}
+
 
 const Home: NextPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -102,16 +99,22 @@ const Home: NextPage = () => {
       githubLink:"https://github.com/phoenixsheppard28/raven",
       technologies: ["FastAPI", "Celery", "Redis", "Scrapy", "SQLite","Docker"]
     },
+     {
+      title: "Java Autograder",
+      description: "Autograder platform for Java coding assignments with static, runtime, and I/O analysis; web interface for grading, submission, and classroom management",
+      githubLink: "https://github.com/phoenixsheppard28/autograder",
+      technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker",]
+    },
     {
       title: "QuickSync",
-      description: "Full-stack B2B web application to consolidate invoice creation in QuickBooks and VendorCafe into one interface, reducing manual data input by more than 50%",
+      description: "Full-stack web app to consolidate invoice creation with QuickBooks and VendorCafe into one interface",
       // image: "/employment/citywide.png", 
-      githubLink: "https://pitch.com/v/f24-demo-day-zxnxqi/50a580be-6497-435e-9e3d-4516bcde4860", // need to replace with demo 
+      liveLink: "https://pitch.com/v/f24-demo-day-zxnxqi/50a580be-6497-435e-9e3d-4516bcde4860", // need to replace with demo 
       technologies: ["FastAPI", "React.js", "MongoDB", "Docker"]
     },
     {
-      title: "Renewable Site Classifier",
-      description: "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations",
+      title: "Renewable Energy Site Classifier",
+      description: "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations; ~90% accuracy",
       // image: "/employment/citywide.png", // need to replace with demo 
       githubLink: "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
       technologies: ["scikit-learn", "pandas", "numpy"]
@@ -123,19 +126,12 @@ const Home: NextPage = () => {
     technologies: ["FastAPI", "React.js", "Vercel", "Redis", ]
     },
     {
-      title: "Java Autograder",
+      title: "Tor Network Implementation",
       description: "soon...",
-      // image: "/employment/citywide.png", 
-      githubLink: "https://github.com/phoenixsheppard28/autograder",
-      technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker",]
+      githubLink: "https://github.com/phoenixsheppard28/tor",
+      technologies: ["C++","TCP/IP","Socks5","OpenSSL"]
     },
-    // {
-    //   title: "Tor Network Implementation",
-    //   description: "soon...",
-    //   // image: "/employment/citywide.png", 
-    //   githubLink: "https://github.com/phoenixsheppard28/tor",
-    //   technologies: ["C++","TCP/IP","Socks5","OpenSSL"]
-    // }
+    
   ];
 
   return (
@@ -362,47 +358,50 @@ const Home: NextPage = () => {
         </section>
 
        {/* Projects Section */}
-<section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
-  <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Projects'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-    Projects
-  </h2>
-  <div className="space-y-0">
-    {projects.map((project, index) => (
-      <div key={index} className="flex items-start gap-6 p-6 font-crimson">
-        {project.image && (
-          <Link href={project.githubLink || "#"} className="w-14 h-14 relative flex-shrink-0 drop-shadow-[0_4px_4px_rgba(85,107,47,0.25)] hover:opacity-80 transition-opacity">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-contain"
-            />
-          </Link>
-        )}
-        <div className="flex-grow">
-          <div className="flex md:items-center flex-col md:flex-row md:gap-2">
-            <h3 className="text-xl font-semibold text-[#556B2F]">
-              <Link href={project.githubLink || "#"} className="hover:underline hover:text-[#6B8E23] transition-colors">
-                {project.title}
-              </Link>
-            </h3>
-            <span className="text-[#556B2F] hidden md:inline">•</span>
-            <div className="flex flex-wrap gap-2 mt-2 md:mt-0">
-              {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="px-2 py-0.5 text-sm rounded-full bg-[#8F9779]/30 text-[#556B2F]">
-                  {tech}
-                </span>
-              ))}
-            </div>
+        <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
+          <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Projects'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
+            Projects
+          </h2>
+          <div className="grid grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <div key={index} className="p-6 bg-[#F8FDF4] rounded-lg shadow-md flex flex-col font-crimson h-full">
+                {project.image && (
+                  <div className="relative w-full h-40 mb-4">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover rounded-t-lg"
+                    />
+                  </div>
+                )}
+                <h3 className="text-xl font-semibold text-[#556B2F] mb-2">{project.title}</h3>
+                <p className="text-[#556B2F] mb-4 flex-grow">{project.description}</p>
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="px-2 py-0.5 text-sm rounded-full bg-[#8F9779]/30 text-[#556B2F]">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div>
+                    {project.githubLink && (
+                      <Link href={project.githubLink} className="text-[#6B8E23] hover:underline transition-colors mr-4">
+                        GitHub
+                      </Link>
+                    )}
+                    {project.liveLink && (
+                      <Link href={project.liveLink} className="text-[#6B8E23] hover:underline transition-colors">
+                        website
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          {project.description && (
-            <p className="mt-2 text-[#556B2F]">{project.description}</p>
-          )}
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+        </section>
         {/* Experience Section */}
         <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
           <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Experience'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
@@ -448,8 +447,7 @@ const Home: NextPage = () => {
           <div className="font-crimson flex flex-wrap gap-4">
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Ancient history</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Biking</span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]"></span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Hiking</span>
+            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Architecture</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">International affairs</span>
           </div>
         </section>
