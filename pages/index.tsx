@@ -97,39 +97,45 @@ const Home: NextPage = () => {
 
   const projects: ProjectType[] = [
     {
+      title: "Raven",
+      description:"Distributed web scraper that identifies and prioritizes the highest-value links on a page using Celery, Redis, and Scrapy!",
+      githubLink:"https://github.com/phoenixsheppard28/raven",
+      technologies: ["FastAPI", "Celery", "Redis", "Scrapy", "SQLite","Docker"]
+    },
+    {
       title: "QuickSync",
-      description: "Full-stack B2B web application to consolidate invoice creation in QuickBooks and VendorCafe into one interface, reducing manual data input by more than 50%; full release coming soon",
+      description: "Full-stack B2B web application to consolidate invoice creation in QuickBooks and VendorCafe into one interface, reducing manual data input by more than 50%",
       // image: "/employment/citywide.png", 
       githubLink: "https://pitch.com/v/f24-demo-day-zxnxqi/50a580be-6497-435e-9e3d-4516bcde4860", // need to replace with demo 
-      technologies: ["FastAPI", "React.js", "MongoDB", "Docker", "python"]
+      technologies: ["FastAPI", "React.js", "MongoDB", "Docker"]
     },
     {
       title: "Renewable Site Classifier",
       description: "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations",
       // image: "/employment/citywide.png", // need to replace with demo 
       githubLink: "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
-      technologies: ["scikit-learn", "pandas", "numpy", "python"]
+      technologies: ["scikit-learn", "pandas", "numpy"]
     },
     {
     title:"UofM Pancake Forecaster",
     description:"Aggregates and displays the days and dining halls that pancakes are served at the University of Michigan!",
     githubLink: "https://github.com/phoenixsheppard28/pancake-forecast",
-    technologies: ["FastAPI", "React.js", "Vercel", "Redis", "python"]
+    technologies: ["FastAPI", "React.js", "Vercel", "Redis", ]
     },
     {
       title: "Java Autograder",
       description: "soon...",
       // image: "/employment/citywide.png", 
       githubLink: "https://github.com/phoenixsheppard28/autograder",
-      technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker", "python"]
+      technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker",]
     },
-    {
-      title: "Tor Network Implementation",
-      description: "soon...",
-      // image: "/employment/citywide.png", 
-      githubLink: "https://github.com/phoenixsheppard28/tor",
-      technologies: ["C++","TCP/IP","Socks5","OpenSSL"]
-    }
+    // {
+    //   title: "Tor Network Implementation",
+    //   description: "soon...",
+    //   // image: "/employment/citywide.png", 
+    //   githubLink: "https://github.com/phoenixsheppard28/tor",
+    //   technologies: ["C++","TCP/IP","Socks5","OpenSSL"]
+    // }
   ];
 
   return (
@@ -437,12 +443,12 @@ const Home: NextPage = () => {
         {/* Interests section */}
         <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
           <h2 className="text-3xl font-crimson mb-8 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Hobbies_&_Fun'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-            Interests
+            Things I like
           </h2>
           <div className="font-crimson flex flex-wrap gap-4">
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Ancient Roman history</span>
+            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Ancient history</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Biking</span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Reading</span>
+            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]"></span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Hiking</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">International affairs</span>
           </div>
