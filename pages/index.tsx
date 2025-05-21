@@ -446,8 +446,8 @@ const Home: NextPage = () => {
           </h2>
           <div className="font-crimson flex flex-wrap gap-4">
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Ancient history</span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Biking</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Architecture</span>
+            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Biking</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">International affairs</span>
           </div>
         </section>
