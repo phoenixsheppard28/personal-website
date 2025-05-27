@@ -260,7 +260,7 @@ const Home: NextPage = () => {
               <p>I'm an engineer studying Computer Science at the University of Michigan</p>
               <p>I like tinkering with interesting technology and solving inefficiencies with software </p>
               <p>My interests are in the fields of web development and machine learning</p>
-              <p>You can reach me at <Link href="mailto:phoenixs@umich.edu" className="underline transition-colors duration-300 hover:text-[#6B8E23]">phoenixs[at]umich[dot]edu</Link></p>
+              <p>You can reach me at phoenixs[at]umich[dot]edu</p>
             </div>
           </div>
         </div>
