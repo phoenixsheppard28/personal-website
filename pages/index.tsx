@@ -259,7 +259,7 @@ const Home: NextPage = () => {
             <div className="text-xl text-[#556B2F] space-y-4 text-left">
               <p>I'm an engineer studying Computer Science at the University of Michigan</p>
               <p>I like tinkering with interesting technology and solving inefficiencies with software </p>
-              <p>My interests are in the fields of web development and machine learning</p>
+              <p>My interests are in the fields of web development, machine learning, and intelligence analysis</p>
               <p>You can reach me at phoenixs[at]umich[dot]edu</p>
             </div>
           </div>
@@ -449,6 +449,7 @@ const Home: NextPage = () => {
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Architecture</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">Biking</span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">International affairs</span>
+
           </div>
         </section>
       </div>
