@@ -56,7 +56,7 @@ const Home: NextPage = () => {
       link: "https://www.engin.umich.edu/",
       degree: "B.S.E. Computer Science",
       description: "Coursework: Data structures & Algorithms, Web Systems, Computer Organization, Unix Programming, C++ Programming, \
-                  Linear Algebra, Calculus 1-3",
+                  Linear Algebra",
       image: "/education/umich.jpg"
     }
   ];
@@ -72,15 +72,6 @@ const Home: NextPage = () => {
       image: "/employment/pursuit.png"
     },
     {
-      company: "Citywide Painting",
-      role: "House Painter, Invoice Clerk",
-      link: "https://www.citywidepaint.com/", 
-      description: [
-        "Painted Section-8 housing across all 5 NYC boroughs; Invoice clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe"
-      ],
-      image: "/employment/citywide.png"
-    },
-    {
       company: "University of Michigan ROTC",
       role: "Software Development Volunteer",
       link: "https://army.rotc.umich.edu/",
@@ -89,6 +80,15 @@ const Home: NextPage = () => {
       ],
       image:"/employment/rotc.png"
       
+    },
+    {
+      company: "Citywide Painting",
+      role: "House Painter, Invoice Clerk",
+      link: "https://www.citywidepaint.com/", 
+      description: [
+        "Painted Section-8 housing across all 5 NYC boroughs; Invoice clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe"
+      ],
+      image: "/employment/citywide.png"
     },
   ];
 
@@ -126,10 +126,10 @@ const Home: NextPage = () => {
     technologies: ["FastAPI", "React.js", "Vercel", "Redis", ]
     },
     {
-      title: "Tor Network Implementation",
-      description: "soon...",
-      githubLink: "https://github.com/phoenixsheppard28/tor",
-      technologies: ["C++","TCP/IP","Socks5","OpenSSL"]
+      title: "Fortnite Skin Notifier",
+      description: "Telegram bot + web app that notifes you when your favorite skin enters the fortnite item shop!",
+      githubLink: "https://github.com/phoenixsheppard28/fortnite-notifier",
+      technologies: ["Go","PostgreSQL","React.js"]
     },
     
   ];
