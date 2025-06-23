@@ -99,6 +99,12 @@ const Home: NextPage = () => {
       githubLink:"https://github.com/phoenixsheppard28/raven",
       technologies: ["FastAPI", "Celery", "Redis", "Scrapy", "SQLite","Docker"]
     },
+    {
+      title: "Fortnite Skin Notifier",
+      description: "Telegram bot + web app that notifes you when your favorite skin enters the fortnite item shop!",
+      githubLink: "https://github.com/phoenixsheppard28/fortnite-notifier",
+      technologies: ["Go","PostgreSQL","React.js"]
+    },
      {
       title: "Java Autograder",
       description: "Autograder platform for Java coding assignments with static, runtime, and I/O analysis; web interface for grading, submission, and classroom management",
@@ -125,12 +131,7 @@ const Home: NextPage = () => {
     githubLink: "https://github.com/phoenixsheppard28/pancake-forecast",
     technologies: ["FastAPI", "React.js", "Vercel", "Redis", ]
     },
-    {
-      title: "Fortnite Skin Notifier",
-      description: "Telegram bot + web app that notifes you when your favorite skin enters the fortnite item shop!",
-      githubLink: "https://github.com/phoenixsheppard28/fortnite-notifier",
-      technologies: ["Go","PostgreSQL","React.js"]
-    },
+    
     
   ];
 
