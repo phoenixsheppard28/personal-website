@@ -110,23 +110,24 @@ const Home: NextPage = () => {
         "Telegram bot + web app that notifes you when your favorite skin enters the fortnite item shop!",
       githubLink: "https://github.com/phoenixsheppard28/fortnite-notifier",
       technologies: ["Go", "PostgreSQL", "React.js"],
+      liveLink: "https://fortnite-notifier.vercel.app/",
     },
-    {
-      title: "Java Autograder",
-      description:
-        "Autograder platform for Java coding assignments with static, runtime, and I/O analysis; web interface for grading, submission, and classroom management",
-      githubLink: "https://github.com/phoenixsheppard28/autograder",
-      technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker"],
-    },
-    {
-      title: "QuickSync",
-      description:
-        "Full-stack web app to consolidate invoice creation with QuickBooks and VendorCafe into one interface",
-      // image: "/employment/citywide.png",
-      liveLink:
-        "https://pitch.com/v/f24-demo-day-zxnxqi/50a580be-6497-435e-9e3d-4516bcde4860", // need to replace with demo
-      technologies: ["FastAPI", "React.js", "MongoDB", "Docker"],
-    },
+    // {
+    //   title: "Java Autograder",
+    //   description:
+    //     "Autograder platform for Java coding assignments with static, runtime, and I/O analysis; web interface for grading, submission, and classroom management",
+    //   githubLink: "https://github.com/phoenixsheppard28/autograder",
+    //   technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker"],
+    // },
+    // {
+    //   title: "QuickSync",
+    //   description:
+    //     "Full-stack web app to consolidate invoice creation with QuickBooks and VendorCafe into one interface",
+    //   // image: "/employment/citywide.png",
+    //   liveLink:
+    //     "https://pitch.com/v/f24-demo-day-zxnxqi/50a580be-6497-435e-9e3d-4516bcde4860", // need to replace with demo
+    //   technologies: ["FastAPI", "React.js", "MongoDB", "Docker"],
+    // },
     {
       title: "Renewable Energy Site Classifier",
       description:
@@ -427,11 +428,15 @@ const Home: NextPage = () => {
           <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Projects'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
             Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="p-6 bg-[#F8FDF4] rounded-lg shadow-md flex flex-col font-crimson h-full"
+                className={`p-6 bg-[#F8FDF4] rounded-lg shadow-md flex flex-col font-crimson h-full ${
+                  index === projects.length - 1 && projects.length % 3 === 1
+                    ? "md:col-start-2"
+                    : ""
+                }`}
               >
                 {project.image && (
                   <div className="relative w-full h-40 mb-4">
@@ -465,6 +470,7 @@ const Home: NextPage = () => {
                       <Link
                         href={project.githubLink}
                         className="text-[#6B8E23] hover:underline transition-colors mr-4"
+                        target="_blank"
                       >
                         GitHub
                       </Link>
@@ -473,8 +479,9 @@ const Home: NextPage = () => {
                       <Link
                         href={project.liveLink}
                         className="text-[#6B8E23] hover:underline transition-colors"
+                        target="_blank"
                       >
-                        website
+                        Website
                       </Link>
                     )}
                   </div>
