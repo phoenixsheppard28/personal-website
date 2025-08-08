@@ -67,7 +67,12 @@
 
 .g1 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color1), 0.7) 0, rgba(var(--color1), 0) 70%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color1), 0.7) 0,
+      rgba(var(--color1), 0) 70%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -80,7 +85,12 @@
 
 .g2 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color2), 0.7) 0, rgba(var(--color2), 0) 70%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color2), 0.7) 0,
+      rgba(var(--color2), 0) 70%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -93,7 +103,12 @@
 
 .g3 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color3), 0.7) 0, rgba(var(--color3), 0) 70%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color3), 0.7) 0,
+      rgba(var(--color3), 0) 70%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -106,7 +121,12 @@
 
 .g4 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color4), 0.7) 0, rgba(var(--color4), 0) 70%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color4), 0.7) 0,
+      rgba(var(--color4), 0) 70%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -119,7 +139,12 @@
 
 .g5 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color5), 0.7) 0, rgba(var(--color5), 0) 70%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color5), 0.7) 0,
+      rgba(var(--color5), 0) 70%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: calc(var(--circle-size) * 2);
   height: calc(var(--circle-size) * 2);
