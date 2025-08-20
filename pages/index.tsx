@@ -72,13 +72,6 @@ const Home: NextPage = () => {
       image: "/employment/pursuit.png",
     },
     {
-      company: "University of Michigan ROTC",
-      role: "Software Development Volunteer",
-      link: "https://army.rotc.umich.edu/",
-      description: ["Tri-Service Wargame Development Team"],
-      image: "/employment/rotc.png",
-    },
-    {
       company: "Citywide Painting",
       role: "House Painter, Invoice Clerk",
       link: "https://www.citywidepaint.com/",
