@@ -283,8 +283,7 @@ const Home: NextPage = () => {
                 inefficiencies with software{" "}
               </p>
               <p>
-                My interests are in the fields of web development, machine
-                learning, and intelligence analysis
+                My interests are in the fields of web development, geospatial science, and intelligence analysis
               </p>
               <p>You can reach me at phoenixs[at]umich[dot]edu</p>
             </div>
@@ -549,7 +548,7 @@ const Home: NextPage = () => {
               Biking
             </span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
-              International affairs
+              Satellites
             </span>
           </div>
         </section>
