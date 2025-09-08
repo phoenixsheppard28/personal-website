@@ -76,7 +76,7 @@ const Home: NextPage = () => {
       role: "House Painter, Invoice Clerk",
       link: "https://www.citywidepaint.com/",
       description: [
-        "Painted Section-8 housing across all 5 NYC boroughs; Invoice clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe",
+        "Painted Section-8 housing across all 5 NYC boroughs; Invoiced clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe",
       ],
       image: "/employment/citywide.png",
     },
