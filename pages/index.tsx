@@ -64,6 +64,12 @@ const Home: NextPage = () => {
   ];
 
   const experience: ExperienceType[] = [
+    { company: "Palantir Technologies",
+      role: "Software Engineer Intern",
+      link : "https://www.palantir.com/",
+      description: ["Incoming Summer 2026"],
+      image: "/employment/palantir.png",
+    },
     {
       company: "Pursuit Markets",
       role: "Software Engineer Intern",
