@@ -64,9 +64,10 @@ const Home: NextPage = () => {
   ];
 
   const experience: ExperienceType[] = [
-    { company: "Palantir Technologies",
+    {
+      company: "Palantir Technologies",
       role: "Software Engineer Intern",
-      link : "https://www.palantir.com/",
+      link: "https://www.palantir.com/",
       description: ["Incoming Summer 2026"],
       image: "/employment/palantir.png",
     },
@@ -289,7 +290,8 @@ const Home: NextPage = () => {
                 inefficiencies with software{" "}
               </p>
               <p>
-                My interests are in the fields of web development, geospatial science, and intelligence analysis
+                My interests are in the fields of web development, geospatial
+                science, and intelligence analysis
               </p>
               <p>You can reach me at phoenixs[at]umich[dot]edu</p>
             </div>
@@ -420,7 +422,55 @@ const Home: NextPage = () => {
             ))}
           </div>
         </section>
-
+        {/* Experience Section */}
+        <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
+          <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Experience'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
+            Experience
+          </h2>
+          <div className="space-y-0">
+            {experience.map((exp, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-6 p-6 font-crimson"
+              >
+                {exp.image && (
+                  <Link
+                    href={exp.link}
+                    className="w-14 h-14 relative flex-shrink-0 drop-shadow-[0_4px_4px_rgba(85,107,47,0.25)] hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src={exp.image}
+                      alt={exp.company}
+                      fill
+                      className="object-contain"
+                    />
+                  </Link>
+                )}
+                <div className="flex-grow">
+                  <div className="flex md:items-center flex-col md:flex-row md:gap-2">
+                    <h3 className="text-xl font-semibold text-[#556B2F]">
+                      <Link
+                        href={exp.link}
+                        className="hover:underline hover:text-[#6B8E23] transition-colors"
+                      >
+                        {exp.company}
+                      </Link>
+                    </h3>
+                    <span className="text-[#556B2F] hidden md:inline">•</span>
+                    <span className="text-[#556B2F]">{exp.role}</span>
+                  </div>
+                  <ul className="mt-2 space-y-1">
+                    {exp.description.map((desc, i) => (
+                      <li key={i} className="text-[#556B2F]">
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
         {/* Projects Section */}
         <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
           <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Projects'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
@@ -483,55 +533,6 @@ const Home: NextPage = () => {
                       </Link>
                     )}
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        {/* Experience Section */}
-        <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
-          <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Experience'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-            Experience
-          </h2>
-          <div className="space-y-0">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-6 p-6 font-crimson"
-              >
-                {exp.image && (
-                  <Link
-                    href={exp.link}
-                    className="w-14 h-14 relative flex-shrink-0 drop-shadow-[0_4px_4px_rgba(85,107,47,0.25)] hover:opacity-80 transition-opacity"
-                  >
-                    <Image
-                      src={exp.image}
-                      alt={exp.company}
-                      fill
-                      className="object-contain"
-                    />
-                  </Link>
-                )}
-                <div className="flex-grow">
-                  <div className="flex md:items-center flex-col md:flex-row md:gap-2">
-                    <h3 className="text-xl font-semibold text-[#556B2F]">
-                      <Link
-                        href={exp.link}
-                        className="hover:underline hover:text-[#6B8E23] transition-colors"
-                      >
-                        {exp.company}
-                      </Link>
-                    </h3>
-                    <span className="text-[#556B2F] hidden md:inline">•</span>
-                    <span className="text-[#556B2F]">{exp.role}</span>
-                  </div>
-                  <ul className="mt-2 space-y-1">
-                    {exp.description.map((desc, i) => (
-                      <li key={i} className="text-[#556B2F]">
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             ))}
