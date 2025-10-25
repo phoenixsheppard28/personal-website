@@ -557,6 +557,9 @@ const Home: NextPage = () => {
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
               Satellites
             </span>
+            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
+              Vocaloid
+            </span>
           </div>
         </section>
       </div>
