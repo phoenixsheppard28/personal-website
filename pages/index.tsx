@@ -6,6 +6,9 @@ import { loadSlim } from "tsparticles-slim";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import Link from "next/link";
+import projects_data from "../data/projects.json";
+import experience_data from "../data/experience.json";
+import education_data from "../data/education.json";
 
 interface ProjectType {
   title: string;
@@ -51,100 +54,11 @@ const Home: NextPage = () => {
     []
   );
 
-  const education: EducationType[] = [
-    {
-      school: "University of Michigan, Ann Arbor",
-      link: "https://www.engin.umich.edu/",
-      degree: "B.S.E. Computer Science",
-      description:
-        "Coursework: Data structures & Algorithms, Web Systems, Computer Organization, Unix Programming, C++ Programming, \
-                  Linear Algebra",
-      image: "/education/umich.jpg",
-    },
-  ];
+  const education: EducationType[] = education_data;
 
-  const experience: ExperienceType[] = [
-    {
-      company: "Palantir Technologies",
-      role: "Software Engineer Intern",
-      link: "https://www.palantir.com/",
-      description: ["Incoming Summer 2026"],
-      image: "/employment/palantir.png",
-    },
-    {
-      company: "Pursuit Markets",
-      role: "Software Engineer Intern",
-      link: "https://www.pursuit.us/",
-      description: ["Summer 2025"],
-      image: "/employment/pursuit.png",
-    },
-    {
-      company: "Citywide Painting",
-      role: "House Painter, Invoice Clerk",
-      link: "https://www.citywidepaint.com/",
-      description: [
-        "Painted Section-8 housing across all 5 NYC boroughs; Invoiced clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe",
-      ],
-      image: "/employment/citywide.png",
-    },
-  ];
+  const experience: ExperienceType[] = experience_data;
 
-  const projects: ProjectType[] = [
-    {
-      title: "Raven",
-      description:
-        "Distributed web scraper that identifies and prioritizes the highest-value links on a page using Celery, Redis, and Scrapy!",
-      githubLink: "https://github.com/phoenixsheppard28/raven",
-      technologies: [
-        "FastAPI",
-        "Celery",
-        "Redis",
-        "Scrapy",
-        "SQLite",
-        "Docker",
-      ],
-    },
-    {
-      title: "Fortnite Skin Notifier",
-      description:
-        "Telegram bot + web app that notifes you when your favorite skin enters the fortnite item shop!",
-      githubLink: "https://github.com/phoenixsheppard28/fortnite-notifier",
-      technologies: ["Go", "PostgreSQL", "React.js"],
-      liveLink: "https://fortnite-notifier.vercel.app/",
-    },
-    // {
-    //   title: "Java Autograder",
-    //   description:
-    //     "Autograder platform for Java coding assignments with static, runtime, and I/O analysis; web interface for grading, submission, and classroom management",
-    //   githubLink: "https://github.com/phoenixsheppard28/autograder",
-    //   technologies: ["FastAPI", "React.js", "PostgreSQL", "Docker"],
-    // },
-    // {
-    //   title: "QuickSync",
-    //   description:
-    //     "Full-stack web app to consolidate invoice creation with QuickBooks and VendorCafe into one interface",
-    //   // image: "/employment/citywide.png",
-    //   liveLink:
-    //     "https://pitch.com/v/f24-demo-day-zxnxqi/50a580be-6497-435e-9e3d-4516bcde4860", // need to replace with demo
-    //   technologies: ["FastAPI", "React.js", "MongoDB", "Docker"],
-    // },
-    {
-      title: "Renewable Energy Site Classifier",
-      description:
-        "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations; ~90% accuracy",
-      // image: "/employment/citywide.png", // need to replace with demo
-      githubLink:
-        "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
-      technologies: ["scikit-learn", "pandas", "numpy"],
-    },
-    {
-      title: "UofM Pancake Forecaster",
-      description:
-        "Aggregates and displays the days and dining halls that pancakes are served at the University of Michigan!",
-      githubLink: "https://github.com/phoenixsheppard28/pancake-forecast",
-      technologies: ["FastAPI", "React.js", "Vercel", "Redis"],
-    },
-  ];
+  const projects: ProjectType[] = projects_data;
 
   return (
     <>

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Raven",
+    "description": "Distributed web scraper that identifies and prioritizes the highest-value links on a page using Celery, Redis, and Scrapy!",
+    "githubLink": "https://github.com/phoenixsheppard28/raven",
+    "technologies": ["FastAPI", "Celery", "Redis", "Scrapy", "SQLite", "Docker"]
+  },
+  {
+    "title": "Fortnite Skin Notifier",
+    "description": "Telegram bot + web app that notifes you when your favorite skin enters the fortnite item shop!",
+    "githubLink": "https://github.com/phoenixsheppard28/fortnite-notifier",
+    "technologies": ["Go", "PostgreSQL", "React.js"],
+    "liveLink": "https://fortnite-notifier.vercel.app/"
+  },
+  {
+    "title": "Renewable Energy Site Classifier",
+    "description": "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations; ~90% accuracy",
+    "githubLink": "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
+    "technologies": ["scikit-learn", "pandas", "numpy"]
+  },
+  {
+    "title": "UofM Pancake Forecaster",
+    "description": "Aggregates and displays the days and dining halls that pancakes are served at the University of Michigan!",
+    "githubLink": "https://github.com/phoenixsheppard28/pancake-forecast",
+    "technologies": ["FastAPI", "React.js", "Vercel", "Redis"]
+  }
+]
