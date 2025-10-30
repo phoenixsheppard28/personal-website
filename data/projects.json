@@ -13,15 +13,21 @@
     "liveLink": "https://fortnite-notifier.vercel.app/"
   },
   {
-    "title": "Renewable Energy Site Classifier",
-    "description": "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations; ~90% accuracy",
-    "githubLink": "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
-    "technologies": ["scikit-learn", "pandas", "numpy"]
+    "title": "C++ HTTP Server",
+    "description": "HTTP server in C++ using sockets and threads",
+    "githubLink": "https://github.com/phoenixsheppard28/httpserver",
+    "technologies": ["C++", "Sockets", "Threads"]
   },
   {
     "title": "UofM Pancake Forecaster",
     "description": "Aggregates and displays the days and dining halls that pancakes are served at the University of Michigan!",
     "githubLink": "https://github.com/phoenixsheppard28/pancake-forecast",
     "technologies": ["FastAPI", "React.js", "Vercel", "Redis"]
+  },
+  {
+    "title": "Renewable Energy Site Classifier",
+    "description": "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations; ~90% accuracy",
+    "githubLink": "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
+    "technologies": ["scikit-learn", "pandas", "numpy"]
   }
 ]
