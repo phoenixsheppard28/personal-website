@@ -245,7 +245,7 @@ const Home: NextPage = () => {
             </svg>
           </Link>
           <Link
-            href="https://www.sheppnix.dev/Phoenix_Sheppard_Resume.pdf"
+            href="/Phoenix_Sheppard_Resume.pdf"
             className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full"
           >
             <svg
