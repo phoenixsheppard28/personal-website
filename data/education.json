@@ -3,7 +3,7 @@
     "school": "University of Michigan, Ann Arbor",
     "link": "https://www.engin.umich.edu/",
     "degree": "B.S.E. Computer Science",
-    "description": "Coursework: Operating Systems, Data structures & Algorithms, Data Mining, Web Systems, Computer Organization, Unix Programming, C++ Programming, Linear Algebra",
+    "description": "Coursework: Distributed Systems, Data structures & Algorithms, Data Mining, Web Systems, Computer Organization, Unix Programming, C++ Programming, Linear Algebra",
     "image": "/education/umich.jpg"
   }
 ]
