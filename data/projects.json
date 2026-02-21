@@ -29,5 +29,11 @@
     "description": "Semi-supervised machine learning to classify the suitability of a location for wind and solar energy installations; ~90% accuracy",
     "githubLink": "https://github.com/phoenixsheppard28/Renewable_Suitability_Predictor",
     "technologies": ["scikit-learn", "pandas", "numpy"]
+  },
+  {
+    "title": "Lecture S3 Mount",
+    "description": "S3 as a local directory (~/lectures) via rclone + launchd daemon; Go CLI in progress.",
+    "githubLink": "https://github.com/phoenixsheppard28/lecture-storage-system",
+    "technologies": ["Go", "Shell", "macOS launchd", "rclone", "AWS S3"]
   }
 ]
