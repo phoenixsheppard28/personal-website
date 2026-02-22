@@ -31,8 +31,8 @@
     "technologies": ["scikit-learn", "pandas", "numpy"]
   },
   {
-    "title": "Lecture S3 Mount",
-    "description": "S3 as a local directory (~/lectures) via rclone + launchd daemon; Go CLI in progress.",
+    "title": "Local S3 Mount",
+    "description": "Mount an S3 bucket as a local folder with rclone, managed as a macOS launchd service. Go CLI in progress.",
     "githubLink": "https://github.com/phoenixsheppard28/lecture-storage-system",
     "technologies": ["Go", "Shell", "macOS launchd", "rclone", "AWS S3"]
   }
