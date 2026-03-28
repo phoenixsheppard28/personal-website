@@ -376,7 +376,7 @@ const Home: NextPage = () => {
               Ancient history
             </span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
-              Architecture
+              Breakcore
             </span>
             <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
               Biking
