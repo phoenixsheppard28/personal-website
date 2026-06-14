@@ -13,10 +13,10 @@
     "liveLink": "https://fortnite-notifier.vercel.app/"
   },
   {
-    "title": "C++ HTTP Server",
-    "description": "HTTP server in C++ using sockets and threads",
-    "githubLink": "https://github.com/phoenixsheppard28/httpserver",
-    "technologies": ["C++", "Sockets", "Threads"]
+    "title": "Echo",
+    "description": "All-in-one AI desktop assistant for everyday tasks, planning, and personal workflows. Work in progress.",
+    "githubLink": "https://github.com/phoenixsheppard28/echo",
+    "technologies": ["Go", "Wails", "React", "TypeScript", "OAuth"]
   },
   {
     "title": "UofM Pancake Forecaster",
