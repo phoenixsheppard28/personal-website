@@ -1,7 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use "variables" as *;
 
+// --- Reset -----------------------------------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $cream;
+  color: $olive-dark;
+  font-family: $font-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+// --- Animated gradient backdrop --------------------------------------------
 :root {
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;
@@ -65,92 +115,68 @@
   filter: blur(100px);
 }
 
-.g1 {
+// The five drifting colour blobs share everything but their motion.
+%blob {
   position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color1), 0.7) 0,
-      rgba(var(--color1), 0) 70%
-    )
-    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
+  opacity: 0.7;
+}
+
+@mixin blob-gradient($color) {
+  background: radial-gradient(
+      circle at center,
+      rgba($color, 0.7) 0,
+      rgba($color, 0) 70%
+    )
+    no-repeat;
+}
+
+.g1 {
+  @extend %blob;
+  @include blob-gradient(var(--color1));
+
   transform-origin: center center;
   animation: moveVertical 30s ease infinite;
-  opacity: 0.7;
 }
 
 .g2 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color2), 0.7) 0,
-      rgba(var(--color2), 0) 70%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  @extend %blob;
+  @include blob-gradient(var(--color2));
+
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 20s reverse infinite;
-  opacity: 0.7;
 }
 
 .g3 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color3), 0.7) 0,
-      rgba(var(--color3), 0) 70%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
+  @extend %blob;
+  @include blob-gradient(var(--color3));
+
   top: calc(50% - var(--circle-size) / 2 + 200px);
   left: calc(50% - var(--circle-size) / 2 - 500px);
   transform-origin: calc(50% + 400px);
   animation: moveInCircle 40s linear infinite;
-  opacity: 0.7;
 }
 
 .g4 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color4), 0.7) 0,
-      rgba(var(--color4), 0) 70%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  @extend %blob;
+  @include blob-gradient(var(--color4));
+
   transform-origin: calc(50% - 200px);
   animation: moveHorizontal 40s ease infinite;
-  opacity: 0.7;
 }
 
 .g5 {
-  position: absolute;
-  background: radial-gradient(
-      circle at center,
-      rgba(var(--color5), 0.7) 0,
-      rgba(var(--color5), 0) 70%
-    )
-    no-repeat;
-  mix-blend-mode: var(--blending);
+  @extend %blob;
+  @include blob-gradient(var(--color5));
+
   width: calc(var(--circle-size) * 2);
   height: calc(var(--circle-size) * 2);
   top: calc(50% - var(--circle-size));
   left: calc(50% - var(--circle-size));
   transform-origin: calc(50% - 800px) calc(50% + 200px);
   animation: moveInCircle 20s ease infinite;
-  opacity: 0.7;
 }

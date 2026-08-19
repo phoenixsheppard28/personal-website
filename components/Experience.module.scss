@@ -1,0 +1,93 @@
+@use "../styles/variables" as *;
+
+// This section sits directly under the hero, so it needs no top padding.
+.section {
+  position: relative;
+  z-index: 20;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 0.5rem 0;
+  font-size: 1.875rem;
+  letter-spacing: -0.025em;
+  text-align: left;
+
+  @include gradient-text;
+  @include heading-glow;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  filter: drop-shadow(0 4px 4px rgba($olive-dark, 0.25));
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.itemTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $olive-dark;
+}
+
+.link {
+  transition: color 0.15s;
+
+  &:hover {
+    color: $olive-mid;
+    text-decoration: underline;
+  }
+}
+
+// Separator dot between company and role, desktop only.
+.separator {
+  display: none;
+
+  @include md {
+    display: inline;
+  }
+}
+
+.bullets {
+  margin-top: 0.5rem;
+
+  > * + * {
+    margin-top: 0.25rem;
+  }
+}

@@ -3,14 +3,16 @@
     "company": "Palantir Technologies",
     "role": "Software Engineer Intern",
     "link": "https://www.palantir.com/",
-    "description": ["Cross Artifacts Dev"],
+    "description": [],
     "image": "/employment/palantir.png"
   },
   {
     "company": "Pursuit Markets",
     "role": "Software Engineer Intern",
     "link": "https://www.pursuit.us/",
-    "description": ["Summer 2025"],
+    "description": [
+      "Engineered distributed scraping pipelines and backend ingestion systems using JS, Python, Temporal, Browserbase"
+    ],
     "image": "/employment/pursuit.png"
   },
   {
@@ -18,7 +20,7 @@
     "role": "House Painter, Invoice Clerk",
     "link": "https://www.citywidepaint.com/",
     "description": [
-      "Painted Section-8 housing across all 5 NYC boroughs; Invoiced clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe"
+      "Painted housing across all 5 NYC boroughs; Invoiced clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe"
     ],
     "image": "/employment/citywide.png"
   }

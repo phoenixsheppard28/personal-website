@@ -1,0 +1,92 @@
+@use "../styles/variables" as *;
+
+.section {
+  position: relative;
+  z-index: 20;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid $rule;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 0.5rem 0;
+  font-size: 1.875rem;
+  letter-spacing: -0.025em;
+  text-align: left;
+
+  @include gradient-text;
+  @include heading-glow;
+}
+
+.list > * + * {
+  margin-top: 2rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+
+  @include md {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 5rem;
+  height: 5rem;
+  filter: drop-shadow(0 4px 4px rgba($olive-dark, 0.25));
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include md {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.text {
+  text-align: center;
+
+  @include md {
+    text-align: left;
+  }
+}
+
+.itemTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $olive-dark;
+}
+
+.link {
+  transition: color 0.15s;
+
+  &:hover {
+    color: $olive-mid;
+    text-decoration: underline;
+  }
+}
+
+.degree {
+  color: $olive-accent;
+}
+
+.description {
+  margin-top: 0.5rem;
+}

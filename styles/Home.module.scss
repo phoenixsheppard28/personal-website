@@ -1,0 +1,201 @@
+@use "variables" as *;
+
+// --- Hero -------------------------------------------------------------------
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 1.5rem;
+  background: linear-gradient(to bottom, $cream 0%, $cream 50%, transparent 100%);
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Blurred wash that fades the particle field into the page below.
+.heroVeil {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(
+    to bottom,
+    rgba($cream, 0.35) 0%,
+    rgba($cream, 0.2) 50%,
+    $cream 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: $hero-width;
+  opacity: 0;
+  transform: translateY(2.5rem);
+  transition: transform 1s, opacity 1s;
+}
+
+.heroContentVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heroStack > * + * {
+  margin-top: 2rem;
+}
+
+.heroTitle {
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 3rem;
+  letter-spacing: -0.025em;
+  text-align: left;
+
+  @include gradient-text;
+  @include heading-glow;
+}
+
+.heroBio {
+  font-size: 1.25rem;
+  text-align: left;
+  color: $olive-dark;
+
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+// --- Fixed chrome -----------------------------------------------------------
+.status {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: $olive-dark;
+  backdrop-filter: blur(4px);
+}
+
+.statusDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: $olive-dark;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// Horizontal above the fold on phones, vertical rail on desktop.
+.socialRail {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  @include md {
+    top: 50%;
+    left: 1rem;
+    right: auto;
+    flex-direction: column;
+    transform: translateY(-50%);
+  }
+}
+
+.socialLink {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  color: $olive-dark;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s, color 0.3s;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    color: $olive-mid;
+    transform: translateY(-0.25rem) scale(1.1);
+
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+.scrollCue {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: bounce 1s infinite;
+}
+
+.scrollCueLabel {
+  font-size: 0.875rem;
+  color: $olive-dark;
+}
+
+.scrollCueArrows {
+  display: flex;
+  flex-direction: column;
+
+  > * + * {
+    margin-top: -0.25rem;
+  }
+}
+
+.scrollCueIcon {
+  width: 1rem;
+  height: 1rem;
+  color: $olive-dark;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+// --- Page body --------------------------------------------------------------
+.main {
+  background: $cream;
+  color: $olive-dark;
+}

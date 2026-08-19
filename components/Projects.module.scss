@@ -1,0 +1,106 @@
+@use "../styles/variables" as *;
+
+.section {
+  position: relative;
+  z-index: 20;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid $rule;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 0.5rem 0;
+  font-size: 1.875rem;
+  letter-spacing: -0.025em;
+  text-align: left;
+
+  @include gradient-text;
+  @include heading-glow;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: $card;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+// Centres a lone card on the last row of a three-column grid.
+.cardCentered {
+  @include md {
+    grid-column-start: 2;
+  }
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.thumbImage {
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.cardTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $olive-dark;
+}
+
+.description {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  color: $olive-dark;
+}
+
+.footer > * + * {
+  margin-top: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  background: rgba($sage, 0.3);
+  color: $olive-dark;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  color: $olive-mid;
+  transition: color 0.15s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,31 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState, useCallback } from "react";
-import Image from "next/image";
 import { loadSlim } from "tsparticles-slim";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import Link from "next/link";
-import Projects from "../components/Projects";
-import projects_data from "../data/projects.json";
 import experience_data from "../data/experience.json";
 import education_data from "../data/education.json";
-
-interface ExperienceType {
-  company: string;
-  role: string;
-  link: string;
-  description: string[];
-  image?: string;
-}
-
-interface EducationType {
-  school: string;
-  link: string;
-  degree: string;
-  description: string;
-  image?: string;
-}
+import Experience, { ExperienceType } from "../components/Experience";
+import Education, { EducationType } from "../components/Education";
+import Interests from "../components/Interests";
+import s from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -68,7 +53,7 @@ const Home: NextPage = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="h-screen flex flex-col justify-center items-center px-6 font-crimson relative bg-gradient-to-b from-[#F0F4E3] via-[#F0F4E3] to-transparent">
+      <section className={s.hero}>
         <Particles
           id="tsparticles"
           init={particlesInit}
@@ -158,22 +143,20 @@ const Home: NextPage = () => {
               },
             },
           }}
-          className="absolute inset-0 w-full h-full"
+          className={s.particles}
         />
 
-        <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-[#F0F4E3]/35 via-[#F0F4E3]/20 to-[#F0F4E3]" />
+        <div className={s.heroVeil} />
 
         <div
-          className={`transform transition-all duration-1000 ${
-            mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          } relative z-10 max-w-3xl w-full`}
+          className={`${s.heroContent} ${mounted ? s.heroContentVisible : ""}`}
         >
-          <div className="space-y-8">
-            <h1 className="text-5xl sm:text-5xl text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Phoenix_Sheppard'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
+          <div className={s.heroStack}>
+            <h1 className={s.heroTitle} data-glow="Phoenix Sheppard">
               Hi, I'm Phoenix
             </h1>
 
-            <div className="text-xl text-[#556B2F] space-y-4 text-left">
+            <div className={s.heroBio}>
               <p>
                 I'm an engineer studying Computer Science at the University of
                 Michigan
@@ -191,18 +174,17 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="fixed bottom-4 right-4 text-sm text-[#556B2F] font-crimson z-50 flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-sm">
+        <div className={s.status}>
           Status:
-          <div className="w-2 h-2 rounded-full bg-[#556B2F] animate-pulse"></div>
+          <div className={s.statusDot}></div>
         </div>
 
-        <div className="fixed md:left-4 md:top-1/2 md:-translate-y-1/2 top-4 left-0 right-0 md:right-auto flex flex-row md:flex-col items-center justify-center md:justify-center gap-2 z-50">
+        <div className={s.socialRail}>
           <Link
             href="https://github.com/phoenixsheppard28"
-            className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full"
+            className={s.socialLink}
           >
             <svg
-              className="w-[30px] h-[30px] opacity-70 hover:opacity-100 transition-opacity"
               viewBox="0 0 24 24"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -212,10 +194,9 @@ const Home: NextPage = () => {
           </Link>
           <Link
             href="https://www.linkedin.com/in/phoenixsheppard/"
-            className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full"
+            className={s.socialLink}
           >
             <svg
-              className="w-[30px] h-[30px] opacity-70 hover:opacity-100 transition-opacity"
               viewBox="0 0 24 24"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -223,40 +204,27 @@ const Home: NextPage = () => {
               <path d="M19 3C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19ZM18.5 18.5V13.2C18.5 11.5 17.1 10.1 15.4 10.1C14.5 10.1 13.4 10.6 12.8 11.4V10.3H10.3V18.5H12.8V13.6C12.8 12.8 13.4 12.2 14.2 12.2C15 12.2 15.6 12.8 15.6 13.6V18.5H18.5ZM6.9 8.2C7.8 8.2 8.5 7.5 8.5 6.6C8.5 5.7 7.8 5 6.9 5C6 5 5.3 5.7 5.3 6.6C5.3 7.5 6 8.2 6.9 8.2ZM8.2 18.5V10.3H5.7V18.5H8.2Z" />
             </svg>
           </Link>
-          <Link
-            href="/Phoenix_Sheppard_Resume.pdf"
-            className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-[#556B2F] hover:text-[#6B8E23] backdrop-blur-sm p-2 rounded-full"
-          >
+          <Link href="/Phoenix_Sheppard_Resume.pdf" className={s.socialLink}>
             <svg
-              className="w-[30px] h-[30px] opacity-70 hover:opacity-100 transition-opacity"
               viewBox="0 0 512 512"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <g>
-                <path
-                  className="st0"
-                  d="M276.239,252.183c-6.37,2.127-13.165,3.308-20.239,3.308c-7.074,0-13.87-1.181-20.24-3.308   c-46.272,7.599-70.489,41.608-70.489,82.877H256h90.728C346.728,293.791,322.515,259.782,276.239,252.183z"
-                />
-                <path
-                  className="st0"
-                  d="M256,240.788c27.43,0,49.658-22.24,49.658-49.666v-14.087c0-27.426-22.228-49.659-49.658-49.659   c-27.43,0-49.658,22.233-49.658,49.659v14.087C206.342,218.548,228.57,240.788,256,240.788z"
-                />
-                <path
-                  className="st0"
-                  d="M378.4,0H133.582C86.234,0,47.7,38.542,47.7,85.899v340.22C47.7,473.476,86.234,512,133.582,512h205.695   h13.175l9.318-9.301l93.229-93.229l9.301-9.31v-13.174V85.899C464.3,38.542,425.766,0,378.4,0z M432.497,386.985H384.35   c-24.882,0-45.074,20.183-45.074,45.073v48.139H133.582c-29.866,0-54.078-24.221-54.078-54.078V85.899   c0-29.874,24.212-54.096,54.078-54.096H378.4c29.876,0,54.096,24.222,54.096,54.096V386.985z"
-                />
+                <path d="M276.239,252.183c-6.37,2.127-13.165,3.308-20.239,3.308c-7.074,0-13.87-1.181-20.24-3.308   c-46.272,7.599-70.489,41.608-70.489,82.877H256h90.728C346.728,293.791,322.515,259.782,276.239,252.183z" />
+                <path d="M256,240.788c27.43,0,49.658-22.24,49.658-49.666v-14.087c0-27.426-22.228-49.659-49.658-49.659   c-27.43,0-49.658,22.233-49.658,49.659v14.087C206.342,218.548,228.57,240.788,256,240.788z" />
+                <path d="M378.4,0H133.582C86.234,0,47.7,38.542,47.7,85.899v340.22C47.7,473.476,86.234,512,133.582,512h205.695   h13.175l9.318-9.301l93.229-93.229l9.301-9.31v-13.174V85.899C464.3,38.542,425.766,0,378.4,0z M432.497,386.985H384.35   c-24.882,0-45.074,20.183-45.074,45.073v48.139H133.582c-29.866,0-54.078-24.221-54.078-54.078V85.899   c0-29.874,24.212-54.096,54.078-54.096H378.4c29.876,0,54.096,24.222,54.096,54.096V386.985z" />
               </g>
             </svg>
           </Link>
         </div>
 
-        <div className="absolute bottom-8 animate-bounce flex flex-col items-center gap-2">
-          <span className="text-sm text-[#556B2F]">see more</span>
-          <div className="flex flex-col -space-y-1">
+        <div className={s.scrollCue}>
+          <span className={s.scrollCueLabel}>see more</span>
+          <div className={s.scrollCueArrows}>
             <svg
-              className="w-4 h-4 text-[#556B2F]"
+              className={s.scrollCueIcon}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -274,118 +242,11 @@ const Home: NextPage = () => {
       {/* See More */}
 
       {/* Main Content */}
-      <div className="bg-[#F0F4E3] text-[#556B2F]">
-        {/* Education Section */}
-        <section className="max-w-4xl mx-auto pt-0 pb-20 px-6 relative z-20">
-          <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Education'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-            Education
-          </h2>
-          <div className="space-y-8">
-            {education.map((edu, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 font-crimson"
-              >
-                {edu.image && (
-                  <Link
-                    href={edu.link}
-                    className="w-20 md:w-32 h-20 md:h-32 relative flex-shrink-0 drop-shadow-[0_4px_4px_rgba(85,107,47,0.25)] hover:opacity-80 transition-opacity"
-                  >
-                    <Image
-                      src={edu.image}
-                      alt={edu.school}
-                      fill
-                      className="object-contain"
-                    />
-                  </Link>
-                )}
-                <div className="text-center md:text-left">
-                  <h3 className="text-xl font-semibold text-[#556B2F]">
-                    <Link
-                      href={edu.link}
-                      className="hover:underline hover:text-[#6B8E23]"
-                    >
-                      {edu.school}
-                    </Link>
-                  </h3>
-                  <p className="text-[#808000]">{edu.degree}</p>
-                  <p className="text-[#556B2F] mt-2">{edu.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        {/* Experience Section */}
-        <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
-          <h2 className="text-3xl font-crimson mb-12 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Experience'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-            Experience
-          </h2>
-          <div className="space-y-0">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-6 p-6 font-crimson"
-              >
-                {exp.image && (
-                  <Link
-                    href={exp.link}
-                    className="w-14 h-14 relative flex-shrink-0 drop-shadow-[0_4px_4px_rgba(85,107,47,0.25)] hover:opacity-80 transition-opacity"
-                  >
-                    <Image
-                      src={exp.image}
-                      alt={exp.company}
-                      fill
-                      className="object-contain"
-                    />
-                  </Link>
-                )}
-                <div className="flex-grow">
-                  <div className="flex md:items-center flex-col md:flex-row md:gap-2">
-                    <h3 className="text-xl font-semibold text-[#556B2F]">
-                      <Link
-                        href={exp.link}
-                        className="hover:underline hover:text-[#6B8E23] transition-colors"
-                      >
-                        {exp.company}
-                      </Link>
-                    </h3>
-                    <span className="text-[#556B2F] hidden md:inline">•</span>
-                    <span className="text-[#556B2F]">{exp.role}</span>
-                  </div>
-                  <ul className="mt-2 space-y-1">
-                    {exp.description.map((desc, i) => (
-                      <li key={i} className="text-[#556B2F]">
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        <Projects projects={projects_data} />
 
-        {/* Interests section */}
-        <section className="max-w-4xl mx-auto py-20 px-6 border-t border-[#D3D9C8] relative z-20">
-          <h2 className="text-3xl font-crimson mb-8 text-left bg-clip-text text-transparent bg-gradient-to-r from-[#556B2F] to-[#808000] tracking-tight relative leading-normal py-2 before:absolute before:content-['Hobbies_&_Fun'] before:inset-0 before:text-[#F0F4E3] before:blur-[30px] before:-z-10 before:opacity-50">
-            Things I like
-          </h2>
-          <div className="font-crimson flex flex-wrap gap-4">
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
-              Ancient history
-            </span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
-              Breakcore
-            </span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
-              Biking
-            </span>
-            <span className="px-4 py-2 rounded-full bg-[#8F9779]/50 text-[#556B2F]">
-              Satellites
-            </span>
-          </div>
-        </section>
+      <div className={s.main}>
+        <Experience experience={experience} />
+        <Education education={education} />
+        <Interests />
       </div>
     </>
   );

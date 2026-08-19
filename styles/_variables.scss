@@ -1,0 +1,45 @@
+// Shared design tokens for the site.
+
+// Olive / cream palette
+$cream: #f0f4e3;
+$olive-dark: #556b2f; // primary text and headings
+$olive-mid: #6b8e23; // links and hover states
+$olive-accent: #808000; // secondary text, gradient end
+$sage: #8f9779; // chip and tag fills
+$rule: #d3d9c8; // section dividers
+$card: #f8fdf4; // project card surface
+
+// Type
+$font-serif: "Crimson Text", serif;
+
+// Layout
+$content-width: 56rem; // matches the old max-w-4xl
+$hero-width: 48rem; // matches the old max-w-3xl
+$breakpoint-md: 768px;
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+// Olive gradient text used by every section heading.
+@mixin gradient-text {
+  background-image: linear-gradient(to right, $olive-dark, $olive-accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+// Soft cream glow behind a heading. The element must set data-glow to its text.
+@mixin heading-glow {
+  &::before {
+    content: attr(data-glow);
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    color: $cream;
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+}
