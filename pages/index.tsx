@@ -180,9 +180,7 @@ const Home: NextPage = () => {
               <p>You can reach me at phoenixs[at]umich[dot]edu</p>
             </div>
 
-            <p className={s.currentLine}>
-              currently: <em>?</em>
-            </p>
+            <p className={s.currentLine}>currently: ?</p>
 
             <Experience experience={experience} />
 
