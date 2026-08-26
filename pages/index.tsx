@@ -8,9 +8,16 @@ import Link from "next/link";
 import experience_data from "../data/experience.json";
 import education_data from "../data/education.json";
 import Experience, { ExperienceType } from "../components/Experience";
-import Education, { EducationType } from "../components/Education";
-import Interests from "../components/Interests";
 import s from "../styles/Home.module.scss";
+
+interface EducationEntry {
+  school: string;
+  link: string;
+  degree: string;
+  description: string;
+}
+
+const INTERESTS = ["ancient history", "breakcore", "reading", "satellites"];
 
 const Home: NextPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -31,7 +38,8 @@ const Home: NextPage = () => {
     [],
   );
 
-  const education: EducationType[] = education_data;
+  const education: EducationEntry[] = education_data;
+  const edu = education[0];
 
   const experience: ExperienceType[] = experience_data;
 
@@ -62,16 +70,16 @@ const Home: NextPage = () => {
             fullScreen: false,
             background: {
               color: {
-                value: "#F0F4E3",
+                value: "#FBFAF8",
               },
             },
             fpsLimit: 120,
             particles: {
               color: {
-                value: ["#556B2F", "#6B8E23", "#808000"],
+                value: ["#1C1B18", "#55534A", "#8A887D"],
               },
               links: {
-                color: "#556B2F",
+                color: "#55534A",
                 distance: 150,
                 enable: true,
                 opacity: 0.3,
@@ -89,7 +97,7 @@ const Home: NextPage = () => {
                 trail: {
                   enable: true,
                   length: 3,
-                  fillColor: "#F0F4E3",
+                  fillColor: "#FBFAF8",
                 },
               },
               number: {
@@ -171,12 +179,21 @@ const Home: NextPage = () => {
               </p>
               <p>You can reach me at phoenixs[at]umich[dot]edu</p>
             </div>
-          </div>
-        </div>
 
-        <div className={s.status}>
-          Status:
-          <div className={s.statusDot}></div>
+            <p className={s.currentLine}>
+              currently: <em>?</em>
+            </p>
+
+            <Experience experience={experience} />
+
+            <div className={s.trail}>
+              <p>
+                {edu.degree}, {edu.school}.
+              </p>
+              <p>{edu.description}.</p>
+              <p>Outside of that I like: {INTERESTS.join(", ")}.</p>
+            </div>
+          </div>
         </div>
 
         <div className={s.socialRail}>
@@ -219,35 +236,7 @@ const Home: NextPage = () => {
             </svg>
           </Link>
         </div>
-
-        <div className={s.scrollCue}>
-          <span className={s.scrollCueLabel}>see more</span>
-          <div className={s.scrollCueArrows}>
-            <svg
-              className={s.scrollCueIcon}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </div>
       </section>
-      {/* See More */}
-
-      {/* Main Content */}
-
-      <div className={s.main}>
-        <Experience experience={experience} />
-        <Education education={education} />
-        <Interests />
-      </div>
     </>
   );
 };

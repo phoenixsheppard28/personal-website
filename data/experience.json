@@ -1,27 +1,17 @@
 [
   {
-    "company": "Palantir Technologies",
+    "company": "Palantir",
     "role": "Software Engineer Intern",
-    "link": "https://www.palantir.com/",
-    "description": [],
-    "image": "/employment/palantir.png"
+    "link": "https://www.palantir.com/platforms/gotham/"
   },
   {
     "company": "Pursuit Markets",
     "role": "Software Engineer Intern",
-    "link": "https://www.pursuit.us/",
-    "description": [
-      "Engineered distributed scraping pipelines and backend ingestion systems using JS, Python, Temporal, Browserbase"
-    ],
-    "image": "/employment/pursuit.png"
+    "link": "https://www.pursuit.us/"
   },
   {
     "company": "Citywide Painting",
-    "role": "House Painter, Invoice Clerk",
-    "link": "https://www.citywidepaint.com/",
-    "description": [
-      "Painted housing across all 5 NYC boroughs; Invoiced clients and manage internal records with Intuit QuickBooks and Yardi VendorCafe"
-    ],
-    "image": "/employment/citywide.png"
+    "role": "House Painter",
+    "link": "https://www.citywidepaint.com/"
   }
 ]

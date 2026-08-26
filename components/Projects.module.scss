@@ -64,13 +64,13 @@
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: $olive-dark;
+  color: $ink;
 }
 
 .description {
   flex-grow: 1;
   margin-bottom: 1rem;
-  color: $olive-dark;
+  color: $ink;
 }
 
 .footer > * + * {
@@ -87,8 +87,8 @@
   padding: 0.125rem 0.5rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  background: rgba($sage, 0.3);
-  color: $olive-dark;
+  background: rgba($chip, 0.3);
+  color: $ink;
 }
 
 .links {
@@ -97,7 +97,7 @@
 }
 
 .link {
-  color: $olive-mid;
+  color: $ink-mid;
   transition: color 0.15s;
 
   &:hover {
